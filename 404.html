@@ -563,6 +563,21 @@ h2{font-size:clamp(40px,6vw,84px)}
 .legal-doc a{color:var(--petrol);font-weight:600}
 
 
+
+/* courts hero photo, options checklist */
+.c-hero .courtphoto{max-width:none;width:100%;margin:0;aspect-ratio:4/3;overflow:hidden;border-top:4px solid var(--yellow);justify-self:stretch}
+.c-hero .courtphoto img{width:100%;height:100%;object-fit:cover;display:block}
+.c-stats b small{font-family:var(--f-body);font-style:normal;font-weight:600;font-size:.4em;letter-spacing:.04em;margin-right:.2em}
+.favs.f3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.favs.f3 .fav h3{font-size:clamp(30px,2.8vw,42px)}
+.hallimgs.one{grid-template-columns:1fr}
+.hallimgs.one figure{height:clamp(240px,34vw,440px)}
+.optlist{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.optlist li{display:flex;gap:14px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line);min-width:0}
+.optlist li::before{content:"";flex:none;width:12px;height:12px;background:var(--yellow);border:2px solid var(--petrol);transform:translateY(1px)}
+.optlist b{font-weight:600}
+.optlist span{color:inherit;opacity:.75}
+@media (max-width:860px){.favs.f3{grid-template-columns:1fr}.optlist{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -577,14 +592,14 @@ h2{font-size:clamp(40px,6vw,84px)}
         <button type="button" class="dd-btn" aria-expanded="false" aria-controls="ddMenu" data-nav-group="courts automaten">Lösungen <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>
         <div class="dd-menu" id="ddMenu">
           <a href="/courts/" data-nav="courts"><span class="dd-k">Courts</span><b>Padel-Courts</b><small>Drei Varianten, fünf Hersteller, Fundamente</small></a>
-          <a href="/courts/#c-hallen"><span class="dd-k">Hallen</span><b>Hallenlösungen</b><small>Polycarbonat und ThermoRoof, ab 250 €/m²</small></a>
+          <a href="/courts/#c-hallen"><span class="dd-k">Hallen</span><b>Hallenlösungen</b><small>Polycarbonat und ThermoRoof, ab 280 €/m²</small></a>
           <a href="automaten/" data-nav="automaten"><span class="dd-k">Automaten</span><b>Verleih &amp; Verkauf</b><small>Schläger, Bälle, Snacks und Getränke 24/7</small></a>
         </div>
       </div>
       <a href="#leistungen">Leistungen</a><a href="#projekte">Projekte</a><a href="referenzen/" data-nav="referenzen">Referenzen</a><a href="blog/" data-nav="blog">Blog</a><a href="#kontakt">Kontakt</a>
     </nav>
     <button type="button" class="burger" aria-expanded="false" aria-controls="mnav" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
-    <a class="btn head-cta" href="#kontakt">Projekt anfragen</a>
+    <a class="btn head-cta" href="https://padelbee.de/#kontakt">Projekt anfragen</a>
   </div>
   <nav class="mnav" id="mnav" aria-label="Mobile Navigation" hidden>
     <a href="/">Start</a>
@@ -606,7 +621,7 @@ h2{font-size:clamp(40px,6vw,84px)}
       <p class="lead">Projektentwickler und 360°-Plattform für Padel, Pickleball und Tennis. Du bekommst alles aus einer Hand: Beratung, Finanzierung, Planung, Bau und Betrieb.</p>
       <p class="label" style="margin-top:22px">Offizieller Padel-Infrastrukturpartner des Bayerischen Tennis-Verbands</p>
       <div class="dach" data-type>Deutschland <span>·</span> Österreich <span>·</span> Schweiz</div>
-      <div class="ctas"><a class="btn" href="#kontakt">Projekt anfragen</a><a class="btn ghost" href="#projekte">50 Projekte ansehen</a></div>
+      <div class="ctas"><a class="btn" href="https://padelbee.de/#kontakt">Projekt anfragen</a><a class="btn ghost" href="#projekte">50 Projekte ansehen</a></div>
     </div>
     <div class="ring" aria-hidden="true">
       <svg viewBox="0 0 400 400">
