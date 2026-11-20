@@ -654,6 +654,15 @@ h2{font-size:clamp(40px,6vw,84px)}
 .hero-media .ring .num b{font-size:40px}
 .hero-media .ring .num small{font-size:7px;letter-spacing:.14em;margin-top:4px;max-width:90px}
 @media (max-width:900px){.hero .inner:has(.hero-media){grid-template-columns:1fr}.hero-media{max-width:none;justify-self:stretch;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.hero-media figure:nth-child(even){transform:none}.hero-media .ring{display:none}}
+
+/* start: intro film on top */
+.v-intro .inner{padding-block:clamp(20px,3vw,36px) 0}
+.v-intro figure{position:relative;margin:0;border-top:4px solid var(--yellow);background:var(--petrol)}
+.v-intro video{width:100%;aspect-ratio:16/9;display:block;object-fit:cover}
+.v-intro .snd{position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:8px;background:rgba(0,36,36,.82);color:var(--white);border:1px solid var(--line-d);padding:9px 14px;font:600 12px/1 var(--f-body);letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.v-intro .snd:hover,.v-intro .snd:focus-visible{color:var(--yellow);border-color:var(--yellow)}
+.films.one{grid-template-columns:minmax(0,1fr);max-width:820px}
+@media (max-width:600px){.v-intro .snd{right:8px;bottom:8px;padding:6px 9px;font-size:10px}}
 </style>
 </head>
 <body>
@@ -698,6 +707,17 @@ h2{font-size:clamp(40px,6vw,84px)}
 <main id="top">
 <script>window.STATIC_VIEW="start";window.REF_STATIC=[];window.BLOG_STATIC=[];window.BLOG_HREF=function(p){return ""+"blog/"+p.slug+"/";};</script>
 <div class="view" data-view="start">
+<section class="band dark v-intro" aria-label="Film: Die 360°-Plattform">
+  <div class="inner">
+    <figure>
+      <video id="introVid" autoplay muted loop playsinline preload="auto" poster="/media/intro.jpg" src="/media/intro.mp4"></video>
+      <button type="button" class="snd" id="introSnd" aria-pressed="false">Ton an</button>
+    </figure>
+  </div>
+</section>
+<script>(()=>{const v=document.getElementById('introVid'),b=document.getElementById('introSnd');if(!v||!b)return;
+if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();v.controls=true;}
+b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted)v.play();b.textContent=v.muted?'Ton an':'Ton aus';b.setAttribute('aria-pressed',String(!v.muted));});})();</script>
 <section class="band dark grid-bg hero">
   <div class="inner">
     <div>
@@ -769,8 +789,7 @@ h2{font-size:clamp(40px,6vw,84px)}
   <div class="inner">
     <p class="label">Film</p>
     <h2 class="reveal">Sehen statt <span class="kw">lesen.</span></h2>
-    <div class="films">
-      <div class="film"><video controls muted playsinline preload="metadata" poster="/media/intro.jpg" src="/media/intro.mp4"></video><h3>Die 360°-Plattform</h3><p>Leistungen und Partnernetzwerk · 30 s</p></div>
+    <div class="films one">
       <div class="film"><video controls muted playsinline preload="metadata" poster="/media/projekte.jpg" src="/media/projekte.mp4"></video><h3>50 Projekte, 3 Länder</h3><p>Unsere Projekte auf der Karte · 45 s</p></div>
     </div>
   </div>
