@@ -644,6 +644,16 @@ h2{font-size:clamp(40px,6vw,84px)}
 .ev-fact .k{display:block;margin-top:16px;font-weight:600;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
 .ev-fact p{margin:8px 0 0;color:var(--muted);font-size:15.5px}
 @media (max-width:860px){.ev-gal{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-gal figure:last-child{display:none}.ev-facts{grid-template-columns:1fr}}
+
+/* start hero: photo collage with 360° badge */
+.hero-media{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:100%;max-width:540px;justify-self:end}
+.hero-media figure{margin:0;aspect-ratio:2/3;overflow:hidden;background:var(--panel);border-top:4px solid var(--yellow)}
+.hero-media figure:nth-child(even){transform:translateY(48px)}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-media .ring{position:absolute;left:-44px;bottom:-24px;width:150px;max-width:150px;background:var(--petrol);border-radius:50%;z-index:2}
+.hero-media .ring .num b{font-size:40px}
+.hero-media .ring .num small{font-size:7px;letter-spacing:.14em;margin-top:4px;max-width:90px}
+@media (max-width:900px){.hero .inner:has(.hero-media){grid-template-columns:1fr}.hero-media{max-width:none;justify-self:stretch;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.hero-media figure:nth-child(even){transform:none}.hero-media .ring{display:none}}
 </style>
 </head>
 <body>
