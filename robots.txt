@@ -1,4 +1,69 @@
+# robots.txt für the-court.com – THE COURT GmbH
+# Stand: 21.11.2026
+#
+# Grundsatz: Die gesamte Website ist öffentlich und darf gecrawlt werden.
+# Auch KI-Crawler sind ausdrücklich erlaubt, damit THE COURT in KI-Suchen
+# und KI-Assistenten (ChatGPT, Perplexity, Claude, Google, Apple, Bing)
+# korrekt und aktuell zitiert werden kann.
+# Eine Kurzfassung für Sprachmodelle steht unter /llms.txt, der Volltext unter /llms-full.txt.
+
+# --- Alle Crawler ---
 User-agent: *
+Allow: /
+
+# --- OpenAI ---
+# OAI-SearchBot: Suchindex für ChatGPT-Suche
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot: Training von OpenAI-Modellen
+User-agent: GPTBot
+Allow: /
+
+# ChatGPT-User: Abruf einer Seite, wenn ein Nutzer in ChatGPT danach fragt
+User-agent: ChatGPT-User
+Allow: /
+
+# --- Perplexity ---
+# PerplexityBot: Suchindex von Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity-User: Abruf auf Nutzeranfrage
+User-agent: Perplexity-User
+Allow: /
+
+# --- Anthropic ---
+# ClaudeBot: Training von Claude-Modellen
+User-agent: ClaudeBot
+Allow: /
+
+# Claude-SearchBot: Suchindex für Claude
+User-agent: Claude-SearchBot
+Allow: /
+
+# Claude-User: Abruf auf Nutzeranfrage in Claude
+User-agent: Claude-User
+Allow: /
+
+# --- Google ---
+# Google-Extended: Nutzung für Gemini und Vertex AI (Googlebot selbst fällt unter *)
+User-agent: Google-Extended
+Allow: /
+
+# --- Apple ---
+# Applebot-Extended: Nutzung für Apple Intelligence (Applebot selbst fällt unter *)
+User-agent: Applebot-Extended
+Allow: /
+
+# --- Microsoft ---
+# Bingbot: Bing-Suche und Copilot
+User-agent: Bingbot
+Allow: /
+
+# --- Common Crawl ---
+# CCBot: offener Webkorpus, den viele Sprachmodelle nutzen
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://the-court.com/sitemap.xml
