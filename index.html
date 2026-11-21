@@ -14,6 +14,8 @@
 <meta property="og:url" content="https://the-court.com/">
 <meta property="og:image" content="https://the-court.com/media/og/start.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="THE COURT by Padelbee – Ready. Play.">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Padelanlage bauen: Planung bis Betrieb | THE COURT"><meta name="twitter:description" content="THE COURT plant und baut Padel-, Pickleball- und Tennisanlagen in DACH: Beratung, Finanzierung, Planung, Bau und Betrieb aus einer Hand. Jetzt anfragen."><meta name="twitter:image" content="https://the-court.com/media/og/start.jpg">
+<link rel="preload" href="media/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="media/fonts/caladea-latin-700-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="media/intro.jpg" fetchpriority="high">
 <link rel="stylesheet" href="media/fonts/fonts.css">
 <link rel="icon" type="image/png" sizes="64x64" href="media/favicon.png"><link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png"><link rel="apple-touch-icon" href="media/apple-touch-icon.png">
 <link rel="stylesheet" href="media/site.css">
@@ -63,7 +65,7 @@
 <section class="band dark v-intro" aria-label="Film: Die 360°-Plattform">
   <div class="inner">
     <figure>
-      <video id="introVid" autoplay muted loop playsinline preload="auto" poster="media/intro.jpg" src="media/intro.mp4"></video>
+      <video id="introVid" autoplay muted loop playsinline preload="metadata" poster="media/intro.jpg" src="media/intro.mp4"></video>
       <button type="button" class="snd" id="introSnd" aria-pressed="false">Ton an</button>
     </figure>
   </div>
@@ -82,10 +84,10 @@ b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted)v.play();b.textCont
       <div class="ctas"><a class="btn" href="https://padelbee.de/#kontakt">Projekt anfragen</a><a class="btn ghost" href="referenzen/">50 Projekte ansehen</a></div>
     </div>
     <div class="hero-media">
-      <figure><img src="media/home/hero_return.jpg" alt="Spieler beim Return am Netz, Ball im Fokus"></figure>
-      <figure><img src="media/home/hero_netz.jpg" alt="Spieler springt am Netz, Aufnahme von oben"></figure>
-      <figure><img src="media/home/hero_ball.jpg" alt="Gelber Ball vor dunklem Court, Blick über die Schulter des Spielers" loading="lazy"></figure>
-      <figure><img src="media/home/hero_halle.jpg" alt="Bälle auf dem Hallendach über den Courts" loading="lazy"></figure>
+      <figure><picture><source type="image/webp" srcset="media/home/hero_return-480.webp 480w, media/home/hero_return.webp 668w" sizes="(max-width: 860px) 100vw, 50vw"><img fetchpriority="high" width="668" height="1000" src="media/home/hero_return.jpg" alt="Spieler beim Return am Netz, Ball im Fokus"></picture></figure>
+      <figure><picture><source type="image/webp" srcset="media/home/hero_netz-480.webp 480w, media/home/hero_netz.webp 666w" sizes="(max-width: 860px) 100vw, 50vw"><img loading="lazy" width="666" height="1000" src="media/home/hero_netz.jpg" alt="Spieler springt am Netz, Aufnahme von oben"></picture></figure>
+      <figure><picture><source type="image/webp" srcset="media/home/hero_ball-480.webp 480w, media/home/hero_ball.webp 666w" sizes="(max-width: 860px) 100vw, 50vw"><img width="666" height="1000" src="media/home/hero_ball.jpg" alt="Gelber Ball vor dunklem Court, Blick über die Schulter des Spielers" loading="lazy"></picture></figure>
+      <figure><picture><source type="image/webp" srcset="media/home/hero_halle-480.webp 480w, media/home/hero_halle.webp 666w" sizes="(max-width: 860px) 100vw, 50vw"><img width="666" height="1000" src="media/home/hero_halle.jpg" alt="Bälle auf dem Hallendach über den Courts" loading="lazy"></picture></figure>
       <div class="ring" aria-hidden="true">
         <svg viewBox="0 0 400 400">
           <g class="rot"><circle cx="200" cy="200" r="168" fill="none" stroke="rgba(255,255,255,.22)" stroke-width="1.5" stroke-dasharray="3 11"/></g>
@@ -142,7 +144,7 @@ b.addEventListener('click',()=>{v.muted=!v.muted;if(!v.muted)v.play();b.textCont
     <p class="label">Film</p>
     <h2 class="reveal">Sehen statt <span class="kw">lesen.</span></h2>
     <div class="films one">
-      <div class="film"><video controls muted playsinline preload="metadata" poster="media/projekte.jpg" src="media/projekte.mp4"></video><h3>50 Projekte, 3 Länder</h3><p>Unsere Projekte auf der Karte · 45 s</p></div>
+      <div class="film"><video controls muted playsinline preload="none" poster="media/projekte.jpg" src="media/projekte.mp4"></video><h3>50 Projekte, 3 Länder</h3><p>Unsere Projekte auf der Karte · 45 s</p></div>
     </div>
   </div>
 </section>
