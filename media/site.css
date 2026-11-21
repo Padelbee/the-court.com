@@ -652,3 +652,10 @@ h2{font-size:clamp(40px,6vw,84px)}
 .band:not(.dark) .fine-note{color:var(--muted)}
 .foot .b2b{margin:10px 0 0;font-size:12px;color:var(--muted-d);flex-basis:100%}
 .mk-note{margin:10px 0 0;font-size:12px;color:var(--muted)}
+
+/* headings: eyebrow line inside the H1 (looks exactly like the former <p class="label">) */
+h1 .h1-kicker{display:block;font-style:normal;line-height:1.55;text-wrap:wrap}
+.hero h1:has(.h1-kicker){margin-top:0}
+.proj h1{font-size:clamp(40px,6vw,84px)}
+.flow h3{font-family:var(--f-display);font-style:italic;font-weight:700;font-size:24px;margin:16px 0 0;line-height:1.55;text-wrap:wrap}
+@media (max-width:860px){.flow h3{margin-top:4px}}
