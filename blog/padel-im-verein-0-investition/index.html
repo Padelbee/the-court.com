@@ -124,7 +124,7 @@ function fill(){ const p=cur; $('baTitle').textContent=p.titel; $('baMeta').text
  $('baContact').hidden=/^https?:/.test(c.href); }
 window.openPost=slug=>{ const p=posts.find(x=>x.slug===slug&&x.live); if(!p){ window._pendingPost=slug; return; }
   cur=p; fill(); $('bArticle').hidden=false; $('b-list-hero').hidden=true; $('b-liste').hidden=true; window.scrollTo(0,0);
-  document.title=p.titel+' · Blog · THE COURT'; const d=document.querySelector('meta[name=description]'); if(d&&p.teaser) d.setAttribute('content',p.teaser); };
+  if(window.BLOG_OPEN!==slug){ document.title=p.titel+' · Blog · THE COURT'; const d=document.querySelector('meta[name=description]'); if(d&&p.teaser) d.setAttribute('content',p.teaser); } };
 window.closePost=()=>{ $('bArticle').hidden=true; $('b-list-hero').hidden=false; $('b-liste').hidden=false; cur=null; };
 render(); if(window.BLOG_OPEN) window.openPost(window.BLOG_OPEN);
 })();
