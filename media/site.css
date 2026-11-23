@@ -67,8 +67,8 @@ h2{font-size:clamp(40px,6vw,84px)}
 .mnav a.sub{font-size:21px;padding-left:16px;color:var(--petrol-200)}
 .mnav a:hover{color:var(--yellow)}
 .mnav-k{margin:14px 0 2px;font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--yellow)}
-@media (max-width:1180px){.nav{display:none}.head-cta{margin-left:auto}.burger{display:flex}}
-@media (min-width:1181px){.mnav{display:none!important}}
+@media (max-width:1320px){.nav{display:none}.head-cta{margin-left:auto}.burger{display:flex}}
+@media (min-width:1321px){.mnav{display:none!important}}
 @media (max-width:460px){.brand img{height:17px}.head-cta{display:none}.burger{margin-left:auto}}
 /* hero */
 .hero .inner{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding-block:clamp(56px,8vw,110px)}
@@ -681,3 +681,10 @@ picture{display:contents}
 .b-table th,.b-table td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
 .b-table th{background:var(--petrol-050);color:var(--petrol);font-weight:700}
 .b-body a{color:var(--petrol);text-decoration:underline;text-underline-offset:3px}
+
+/* language switch (DE | EN) in the header navigation and the mobile menu */
+.nav a.nav-lang{padding-left:20px;border-left:1px solid rgba(255,255,255,.28)}
+.mnav a.mnav-lang{font-size:18px;color:var(--petrol-200);border-bottom:0;margin-top:10px}
+/* the desktop navigation needs ~1320px with the language switch; narrower screens use the burger menu */
+@media (min-width:1321px) and (max-width:1439px){.nav{gap:14px;letter-spacing:.12em}.nav a.nav-lang{padding-left:14px}}
+@media (min-width:1440px){.nav{gap:20px}.nav a.nav-lang{padding-left:12px}}
