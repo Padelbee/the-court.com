@@ -682,6 +682,10 @@ picture{display:contents}
 .b-table th{background:var(--petrol-050);color:var(--petrol);font-weight:700}
 .b-body a{color:var(--petrol);text-decoration:underline;text-underline-offset:3px}
 
+/* partner tile with the partner's own icon next to its name */
+.lg .m.ico{width:46px;height:52px;flex:none;margin-right:14px;max-width:none}
+@media (max-width:600px){.lg .m.ico{width:28px;height:32px;margin-right:8px}.lg:has(.ico) .txt{font-size:18px}.lg:has(.ico) .txt small{font-size:8px;letter-spacing:.14em}}
+
 /* language switch (DE | EN) in the header navigation and the mobile menu */
 .nav a.nav-lang{padding-left:20px;border-left:1px solid rgba(255,255,255,.28)}
 .mnav a.mnav-lang{font-size:18px;color:var(--petrol-200);border-bottom:0;margin-top:10px}
